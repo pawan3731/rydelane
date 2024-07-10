@@ -36,7 +36,7 @@ button:focus{
     padding: 10.2px 28px;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
 	transition: var(--transition01);
 }
@@ -53,6 +53,24 @@ button:focus{
 }
 .sectionPadding {
 	padding-block: 90px;
+}
+.form-label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+.form-control {
+    border-color: var(--borderColor);
+    height: 48px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+.formGroup {
+    margin-bottom: 20px;
+}
+.whiteCard {
+    box-shadow: 0px 0px 25px 0 rgba(0,0,0,.2);
+    padding: 20px;
 }
 
 
@@ -71,6 +89,13 @@ button:focus{
 .siteHeader .nav-item .nav-link:hover {
     color: var(--pirmaryColor);
 }
+
+/* Form Css */
+.formContainer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 
 /* Footer */
 .footerContent h4 {
