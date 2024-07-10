@@ -51,30 +51,52 @@
   </div>
 </nav>
 
-<section class="sectionPadding">
+<section class="sectionPadding signUp_form">
   <div class="formContainer">
     <div class="mb-4 mb-lg-5 text-center">
-      <h1 class="pageTitle mb-2">Sign In</h1>
-      <p class="pageSubTitle">Welcome To Website</p>
+      <h1 class="pageTitle">Sign Up</h1>
     </div>
     <form class="whiteCard">
-      <div class="formGroup">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" placeholder="Enter Email">
+      <div class="row">
+        <div class="formGroup col-md-6">
+          <label class="form-label">Name</label>
+          <input type="email" class="form-control" placeholder="Enter Name">
+        </div>
+        <div class="formGroup col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="Enter Email">
+        </div>
+        <div class="formGroup col-md-12">
+          <label class="form-label">Phone</label>
+          <input type="email" class="form-control" placeholder="Enter Phone">
+        </div>
+        <div class="formGroup col-md-12">
+          <label class="form-label">About</label>
+          <textarea type="email" class="form-control" placeholder="Enter Email" rows="4"></textarea>
+        </div>
+        <div class="formGroup col-md-6">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="Enter Password">
+        </div>
+        <div class="formGroup col-md-6">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Enter Conform Password">
+        </div>
+        <div class="formGroup col-md-12">
+          <label class="form-label">Image</label>
+          <input class="form-control form-control-lg" type="file" id="formFile">
+        </div>
       </div>
       <div class="formGroup">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="Enter Password">
+        <input type="checkbox" class="form-check-input" id="check1">
+        <label class="form-check-label" for="check1">You agree our <a class="formLink" href="#">Terms</a> and <a
+            class="formLink" href="#">Privacy Policy</a></label>
       </div>
       <div class="formGroup">
-        <button type="submit" class="btn btnPrimary w-100">Sign In</button>
+        <button type="submit" class="btn btnPrimary w-100">Sign Up</button>
       </div>
-      <div class="formGroup text-center">
-        <a class="formLink" href="forgot_password.html">Forgot Password</a>
-      </div>
-
       <div class="text-center mt-5">
-        <p>Don't have an account? <a href="sign_up.html" class="formLink">Sign Up</a></p>
+        <p>Don't have an account? <a href="login.html" class="formLink">Sign In</a></p>
       </div>
     </form>
   </div>

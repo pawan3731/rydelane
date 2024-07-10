@@ -52,26 +52,20 @@ button:focus{
 	color: var(--pirmaryColor) !important;
 }
 .sectionPadding {
-	padding-block: 90px;
+	padding-block: 70px;
 }
-.form-label {
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 4px;
+.lightBg {
+    background-color: var(--lightBg) !important;
 }
-.form-control {
-    border-color: var(--borderColor);
-    height: 48px;
-    border-radius: 12px;
-    font-size: 15px;
+.pageTitle {
+    font-size:40px;
+    font-weight:700;
 }
-.formGroup {
-    margin-bottom: 20px;
+.pageSubTitle {
+    font-size:16px;
+    font-weight:500;
 }
-.whiteCard {
-    box-shadow: 0px 0px 25px 0 rgba(0,0,0,.2);
-    padding: 20px;
-}
+
 
 
 /* Header */
@@ -82,7 +76,7 @@ button:focus{
 }
 .siteHeader .nav-item .nav-link {
     font-size: 16px;
-    color: var(--secondaryColor);
+    color: var(--whiteColor);
     font-weight: 600;
     padding-inline: 30px;
 }
@@ -95,7 +89,69 @@ button:focus{
     max-width: 600px;
     margin: 0 auto;
 }
+.signUp_form .formContainer {
+    max-width: 800px;
+}
+.whiteCard {
+    box-shadow:0px 0px 24px 0 rgba(0,0,0,.2);
+    padding:32px;
+}
+.formGroup {
+    margin-bottom:20px;
+}
+.form-label {
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:4px;
+}
+.form-control {
+    border-color:var(--borderColor);
+    height:48px;
+    border-radius:5px;
+}
+textarea.form-control {
+    height: 120px;
+}
+.formLink {
+    color:var(--secondaryColor);
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+}
+.formLink:hover {
+    text-decoration:underline;
+    color:var(--primaryColor);
+}
 
+
+/* App Link Section */
+.appLink_outer {
+	display: flex;
+	gap: 16px;
+	margin-top: 40px;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.appLink_btn {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    width: 185px;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: left;
+}
+.appLink_btn i {
+    font-size: 20px;
+    color: #fff;
+}
+.appLink_btn span {
+    font-size: 14px;
+    color: #fff;
+}
 
 /* Footer */
 .footerContent h4 {
