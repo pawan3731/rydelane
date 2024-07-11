@@ -123,6 +123,31 @@ textarea.form-control {
     color:var(--primaryColor);
 }
 
+/* Book Driver */
+.driverForm .formContainer {
+    max-width: 1000px;
+}
+.addNumber {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 5px;
+}
+.addNumber span {
+    border: 1px solid var(--borderColor);
+    flex-basis: 45px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.addNumber input {
+    flex-basis: calc(100% - 100px);
+    text-align: center;
+}
+
 
 /* App Link Section */
 .appLink_outer {
