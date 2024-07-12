@@ -44,11 +44,11 @@
         </li>
       </ul>
     </div>
-    <div class="ms-3 headerBtn">
+    <div class="ms-3 headerBtn d-none">
       <a href="sign_up.html" class="btn btnPrimary" type="button">Sign Up</a>
       <a href="login.html" class="btn btnPrimary ms-1 ms-md-3" type="button">Login</a>
     </div>
-    <div class="dropdown d-none">
+    <div class="dropdown">
       <div class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="userName">QS</span>
       </div>
@@ -65,8 +65,177 @@
 <section class="sectionPadding driverForm">
   <div class="formContainer">
     <div class="mb-4 mb-lg-5 text-center">
-      <h1 class="pageTitle mb-2">Content Coming Soon</h1>
+      <h1 class="pageTitle mb-2">Airport Luxury Transportation</h1>
     </div>
+    <form class="whiteCard">
+      <div class="row">
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Pickup</label>
+          <input type="text" class="form-control" placeholder="Pickup">
+        </div>
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Dropoff</label>
+          <input type="text" class="form-control" placeholder="Dropoff">
+        </div>
+        <div class="formGroup col-md-12">
+          <input type="checkbox" class="form-check-input checkShow" id="check1">
+          <label class="form-check-label fontWeight_600" for="check1">
+            Add Stops <span data-bs-toggle="tooltip" data-bs-placement="top"
+            title="There is a $15 fee for every step added. Please add stops in the order you want to visit them. The driver will wait for you at each stop for 5 minutes."><img src="images/info.svg" alt="info-icon" width="20"></span> </label>
+
+          <div class="hideDiv mt-3">
+            <div class="inputRow">
+              <input type="email" class="form-control" placeholder="Enter Password">
+              <button id="DeleteRow" type="button"><img src="images/delete.svg" alt="delete-icon" width="16"></button>
+            </div>
+            <div id="inputNewRow"></div>
+            <div class="text-end">
+              <button id="newRowAdder" class="btnBlack btn mt-2 smallBtn" type="button">+ Add More</button>
+            </div>
+          </div>
+        </div>
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Pickup Date</label>
+          <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Pickup Time</label>
+          <div class="row">
+            <div class="col-md-4">
+              <input type="number" class="form-control" placeholder="HH">
+            </div>
+            <div class="col-md-4">
+              <input type="number" class="form-control" placeholder="MM">
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="AM/PM">
+            </div>
+          </div>
+        </div>
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Airline</label>
+          <input type="text" class="form-control" placeholder="Airline">
+        </div>
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Flight number</label>
+          <input type="text" class="form-control" placeholder="Flight number">
+        </div>
+
+        <div class="formGroup col-lg-3 addNumber">
+          <label class="form-label">Large Luggage</label>
+          <p>
+            <span class="minus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-minus ">
+                <path d="M5 12h14"></path>
+              </svg>
+            </span>
+            <input type="text" value="0" class="qty form-control" />
+            <span class="add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus ">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+            </span>
+          </p>
+        </div>
+        <div class="formGroup col-lg-3 addNumber">
+          <label class="form-label">Small Luggage</label>
+          <p>
+            <span class="minus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-minus ">
+                <path d="M5 12h14"></path>
+              </svg>
+            </span>
+            <input type="text" value="0" class="qty form-control" />
+            <span class="add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus ">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+            </span>
+          </p>
+        </div>
+        <div class="formGroup col-lg-3 addNumber">
+          <label class="form-label">Adults</label>
+          <p>
+            <span class="minus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-minus ">
+                <path d="M5 12h14"></path>
+              </svg>
+            </span>
+            <input type="text" value="0" class="qty form-control" />
+            <span class="add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus ">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+            </span>
+          </p>
+        </div>
+        <div class="formGroup col-lg-3 addNumber">
+          <label class="form-label">Kids</label>
+          <p>
+            <span class="minus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-minus ">
+                <path d="M5 12h14"></path>
+              </svg>
+            </span>
+            <input type="text" value="0" class="qty form-control" />
+            <span class="add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus ">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+            </span>
+          </p>
+        </div>
+        <div class="formGroup col-lg-6">
+          <label class="form-label">Upfront Amount</label>
+          <input type="number" class="form-control" placeholder="Enter Amount">
+        </div>
+        <div class="formGroup col-lg-3">
+          <label class="form-label">Advanced Options</label><br>
+          <div class="checkWrap">
+            <input class="form-check-input" type="radio" name="radio01" id="radio01">
+            <label class="form-check-label" for="radio01">Curbside</label>
+          </div>
+          <div class="checkWrap">
+            <input class="form-check-input" type="radio" name="radio01" id="radio01">
+            <label class="form-check-label" for="radio01" data-bs-toggle="tooltip" data-bs-placement="top"
+              title="There is a $15 fee for this option. A driver will meet you at the airport with a sign with your name on it. The driver will help you with your luggage and escort you to the vehicle.">Meeting
+              and Greeting</label>
+          </div>
+        </div>
+        <div class="formGroup col-lg-3">
+          <div class="checkWrap">
+            <input type="checkbox" class="form-check-input" id="check1">
+            <label class="form-check-label" for="check1">Animal <span data-bs-toggle="tooltip" data-bs-placement="top"
+                title="If you are traveling with a pet, please select this option. We will try to match you with a driver who is comfortable with animals."><img src="images/info.svg" alt="info-icon" width="20"> </span></label>
+          </div>
+        </div>
+      </div>
+      <div class="w-50 mx-auto mt-3">
+        <div class="formGroup">
+          <button type="submit" class="btn btnPrimary w-100">Book Driver</button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
 
