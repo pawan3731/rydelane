@@ -14,12 +14,13 @@
   <link href="css/responsive.css" rel="stylesheet">
   <title>Rydelane</title>
 </head>
-<nav class="navbar navbar-expand-lg siteHeader sticky-top">
+<nav class="navbar navbar-expand-md siteHeader sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="images/logo_2.webp" alt="site-logo" width="70"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <svg fill="#222" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <a class="navbar-brand me-auto" href="index.html"><img src="images/logo_2.webp" alt="site-logo" width="70"></a>
+    <button class="navbar-toggler order-3 ms-3" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <svg fill="#fff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <title></title>
         <g data-name="menu " id="menu_">
           <path d="M29,6H3A1,1,0,0,0,3,8H29a1,1,0,0,0,0-2Z"></path>
@@ -40,21 +41,25 @@
           <a class="nav-link" href="faq.html">FAQ</a>
         </li>
       </ul>
-      <div class="ms-3 headerBtn d-none">
-        <a href="sign_up.html" class="btn btnPrimary" type="button">Sign Up</a>
-        <a href="login.html" class="btn btnPrimary ms-3" type="button">Login</a>
+    </div>
+    <div class="notification">
+      <a href="notification.html"><i class="bi bi-bell"></i>
+        <span class="notiDot"></span> </a>
+    </div>
+    <div class="headerBtn d-none">
+      <a href="sign_up.html" class="btn btnWhite" type="button">Sign Up</a>
+      <a href="login.html" class="btn btnWhite ms-1 ms-md-3" type="button">Login</a>
+    </div>
+    <div class="dropdown">
+      <div class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="userName">QS</span>
       </div>
-      <div class="dropdown">
-        <div class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="userName">QS</span>
-        </div>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-          <li><a class="dropdown-item" href="order.html">Order</a></li>
-          <li><a class="dropdown-item" href="change_password.html">Change Password</a></li>
-          <li><a class="dropdown-item" href="login.html">Logout</a></li>
-        </ul>
-      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+        <li><a class="dropdown-item" href="order.html">Order</a></li>
+        <li><a class="dropdown-item" href="change_password.html">Change Password</a></li>
+        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -62,17 +67,32 @@
 <section class="sectionPadding">
   <div class="container">
     <div class="mb-4 mb-lg-5 text-center">
-        <h1 class="pageTitle">Order</h1>
+      <h1 class="pageTitle">Order</h1>
     </div>
-    <div class="rydelaneTable">
+    <div class="orderfield mb-3">
+      <div class="orderSearch">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <div class="orderFilter d-flex gap-3 align-items-center">
+        <label class="form-label">Filter</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>All</option>
+          <option value="1">Completed</option>
+          <option value="2">Ongoing</option>
+          <option value="3">Upcoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="rydelaneTable table-responsive">
       <table class="table">
+
         <head>
           <tr>
             <th>ID</th>
             <th>Image</th>
-            <th>Name</th>
-            <th>Route</th>
-            <th>Date & Time</th>
+            <th style="min-width: 120px;">Name</th>
+            <th style="min-width: 200px;">Route</th>
+            <th style="min-width: 200px;">Date & Time</th>
             <th>Status</th>
             <th>Price</th>
             <th>Distance</th>
@@ -86,7 +106,7 @@
             <td>Jackson</td>
             <td>
               <div class="routeDiv">
-                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span> 
+                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
                 <p></p>
                 <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
               </div>
@@ -105,7 +125,7 @@
             <td>Jackson</td>
             <td>
               <div class="routeDiv">
-                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span> 
+                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
                 <p></p>
                 <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
               </div>
@@ -124,7 +144,7 @@
             <td>Jackson</td>
             <td>
               <div class="routeDiv">
-                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span> 
+                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
                 <p></p>
                 <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
               </div>
@@ -140,8 +160,8 @@
         </tbody>
       </table>
     </div>
-    </div>
-</div>
+  </div>
+  </div>
 </section>
 
 <section class="sectionPadding lightBg appLinkWrap">
@@ -152,15 +172,15 @@
           <h2 class="pageTitle mb-2">Download the App</h2>
           <p class="pageSubTitle">Take classes on the go with the freeio app. Stream or download
             to watch on the plane, the subway, or wherever you learn best.</p>
-          </div>
-          <div class="appLink_outer">
-            <a class="appLink_btn" href="#">
-              <i class="bi bi-apple"></i> <span>Download on the <br> <b>Apple Store</b></span>
-            </a>
-            <a class="appLink_btn" href="#">
-              <i class="bi bi-google-play"></i> <span>Get in on <br> <b>Google Play</b></span>
-            </a>
-          </div>
+        </div>
+        <div class="appLink_outer">
+          <a class="appLink_btn" href="#">
+            <i class="bi bi-apple"></i> <span>Download on the <br> <b>Apple Store</b></span>
+          </a>
+          <a class="appLink_btn" href="#">
+            <i class="bi bi-google-play"></i> <span>Get in on <br> <b>Google Play</b></span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 :root {
 	--primaryColor: #FF9A03;
 	--secondaryColor: #111;
+    --blackColor: #000;
 	--textColor: #556677;
     --textLightColor: #999;
 	--borderColor: #ddd;
@@ -8,6 +9,7 @@
 	--transition01: .4s all; 
 	--lightBg: #e4f3ff;
     --greenColor: #45a359;
+    --redColor: #f85252;
 }
 
 /* Common */
@@ -30,7 +32,7 @@ a, a:hover {
     max-width: 1440px;
     padding-inline: 24px;
 }
-button:focus, input{
+button:focus, input, .form-select{
     outline: unset !important;
     box-shadow: none !important;
 }
@@ -50,9 +52,22 @@ button:focus, input{
     background-color: var(--secondaryColor);
     color: var(--whiteColor);
 }
+.btnWhite {
+    background-color: var(--whiteColor);
+    color: var(--secondaryColor);
+}
+.btnRed {
+    background-color: var(--redColor);
+    color: var(--whiteColor);
+}
 .smallBtn {
     padding: 7px 12px;
     font-size: 14px;
+}
+.btnWhite:hover {
+    background-color: var(--whiteColor);
+    color: var(--secondaryColor);
+    opacity: 0.8;
 }
 .btnPrimary:hover {
 	opacity: 0.8;
@@ -62,8 +77,15 @@ button:focus, input{
     opacity: 0.8;
     color: var(--whiteColor);
 }
+.btnRed:hover {
+    opacity: 0.8;
+    color: var(--whiteColor);
+}
 .primaryColor {
 	color: var(--primaryColor) !important;
+}
+.blackColor {
+    color: var(--blackColor) !important;
 }
 .sectionPadding {
 	padding-block: 70px;
@@ -98,7 +120,6 @@ img {
     font-weight: 600;;
 }
 
-
 /* Header */
 .siteHeader {
     padding-block: 10px;
@@ -115,7 +136,7 @@ img {
     padding-inline: 30px;
 }
 .siteHeader .nav-item .nav-link:hover {
-    color: var(--primaryColor);
+    color: var(--textColor);
 }
 
 .siteHeader .dropdown-menu[data-bs-popper] {
@@ -135,7 +156,7 @@ img {
     transition: var(--transition01);
 }
 .siteHeader .dropdown-menu .dropdown-item:hover {
-    color: var(--primaryColor);
+    color: var(--blackColor);
 }
 .siteHeader .dropdown-menu li:not(:last-child) .dropdown-item {
     border-bottom: 0;
@@ -144,7 +165,6 @@ img {
     color: var(--whiteColor);
     cursor: pointer;
 }
-
 .siteHeader .dropdown-toggle .userName {
     background: var(--whiteColor);
     border-radius: 50%;
@@ -154,7 +174,23 @@ img {
     font-size: 16px;
     color: var(--secondaryColor);
 }
-
+.siteHeader .notification a {
+    font-size: 20px;
+    position: relative;
+    color: var(--whiteColor);
+    padding: 2px 32px 0 10px;
+    display: inline-block;
+}
+.siteHeader .notification .notiDot {
+    position: absolute;
+    background: var(--greenColor);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 9px;
+    right: 33px;
+    border: 1px solid var(--whiteColor);
+}
 
 /* Banner */
 .banner {
@@ -180,7 +216,7 @@ img {
 .banner h6 {
     font-weight: 600;
     font-size: 16px;
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
 }
 .banner h1 {
     font-size: 54px;
@@ -211,7 +247,7 @@ img {
     font-weight:600;
     margin-bottom:4px;
 }
-.form-control {
+.form-control, .form-select {
     border-color:var(--borderColor);
     height:48px;
     border-radius:5px;
@@ -227,7 +263,7 @@ textarea.form-control {
 }
 .formLink:hover {
     text-decoration:underline;
-    color:var(--primaryColor);
+    color:var(--blackColor);
 }
 
 /* Book Driver */
@@ -308,6 +344,11 @@ span.awaydot {
     text-align: right;
     font-size: 14px;
     font-weight: 600;
+    color: var(--secondaryColor);
+}
+.driverPrice span {
+    color: var(--textColor);
+    font-size: 12px;
 }
 .driverDes {
     font-size: 15px;
@@ -320,17 +361,17 @@ span.awaydot {
     font-size: 15px;
 }
 .passangerLimit span {
-    background: var(--primaryColor);
+    background: var(--secondaryColor);
     display: inline-block;
     padding: 2px 9px;
     text-align: center;
-    color: var(--secondaryColor);
+    color: var(--whiteColor);
     border-radius: 4px;
     font-weight: bold;
 }
 
 
-/* table */
+/* Order */
 table th, table td {
     font-size: 14px;
     vertical-align: middle;
@@ -342,9 +383,13 @@ table tbody tr:hover {
 .rydelaneTable th {
     background: var(--lightBg);
     border: none;
+    white-space: nowrap;
+}
+.rydelaneTable td {
+    min-width: 100px;
 }
 .viewBtn {
-    border:1px solid var(--primaryColor);
+    border:1px solid var(--borderColor);
     width: 32px;
     padding: 0;
     height: 32px;
@@ -382,7 +427,28 @@ table tbody tr:hover {
 .tableImg {
     object-fit: cover;
 }
+.orderfield {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.orderFilter {
+    width: 260px;
+}
+.orderFilter .form-select {
+    flex-basis: 200px;
+}
+.orderSearch input {
+    width: 260px;
+}
 
+/* Notification Page */
+.notifcationPage .driverCard .btn {
+    font-size: 14px;
+    padding: 7px 16px;
+}
 
 /* Order Detail */
 .orderDetail .container {
@@ -425,10 +491,10 @@ table tbody tr:hover {
     max-width: 700px;
     margin: 0 auto;
 }
-.hideDiv {
+.hideDiv, .carseatHide {
     display:none;
 }
-.hideDiv.open {
+.hideDiv.open, .carseatHide.open {
     display: block;
 }
 .inputRow {
@@ -437,7 +503,7 @@ table tbody tr:hover {
     gap: 10px;
 }
 .inputRow button {
-    background: #f34242;
+    background: var(--redColor);
     color: #fff;
     height: 48px;
     width: 48px;
@@ -463,7 +529,7 @@ table tbody tr:hover {
     cursor: pointer;
 }
 .accordion-button:not(.collapsed) {
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
     background-color: var(--lightBg);
     box-shadow: none;
 }
@@ -483,8 +549,8 @@ table tbody tr:hover {
     transform: rotate(45deg);
     height: 14px;
     width: 8px;
-    border-bottom: 3px solid var(--primaryColor);
-    border-right: 3px solid var(--primaryColor);
+    border-bottom: 3px solid var(--greenColor);
+    border-right: 3px solid var(--greenColor);
     left: 0px;
     top: 4px;
 }
@@ -492,7 +558,7 @@ table tbody tr:hover {
     font-size: 54px;
     margin: 0 0 10px;
     display: inline-block;
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
     line-height: normal;
 }
 .howItWork p {
@@ -525,7 +591,7 @@ table tbody tr:hover {
     transition: var(--transition01);
 }
 .footerContent ul a:hover {
-    color: var(--primaryColor);
+    color: var(--blackColor);
 }
 
 .footerContent .form-control {
@@ -538,7 +604,7 @@ table tbody tr:hover {
     width: 36px;
     height: 36px;
     border: none;
-    background: var(--primaryColor);
+    background: var(--secondaryColor);
 	color: var(--whiteColor);
     position: absolute;
     right: 6px;
@@ -605,7 +671,7 @@ table tbody tr:hover {
     height: 32px;
     border-radius: 50%;
     overflow: hidden;
-    background: var(--primaryColor);
+    background: var(--secondaryColor);
     position: absolute;
     bottom: 0;
     right: 10px;
@@ -641,7 +707,7 @@ table tbody tr:hover {
     z-index: 99;
     bottom: 20px;
     right: 20px;
-    background: var(--primaryColor);
+    background: var(--secondaryColor);
     width: 50px;
     height: 50px;
     border-radius: 50%;

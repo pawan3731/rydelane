@@ -64,28 +64,64 @@
   </div>
 </nav>
 
-<section class="sectionPadding">
-  <div class="formContainer">
+<section class="sectionPadding orderDetail">
+  <div class="container">
     <div class="mb-4 mb-lg-5 text-center">
-      <h1 class="pageTitle">Change Password</h1>
+      <h1 class="pageTitle">Order Detail</h1>
     </div>
-    <form class="whiteCard">
-      <div class="formGroup">
-        <label class="form-label">Old Password</label>
-        <input type="password" class="form-control" placeholder="Enter Old Password">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="cardTop">
+          <div class="driverImg">
+            <img src="images/img01.png" alt="driver-img">
+          </div>
+          <div class="driverDetail">
+            <div class="driverName">Qasim <span class="awayTime"></div>
+            <div class="driverNb">7037 Dunnar Rd Dundlk, MD 21222</div>
+            <div class="rating d-flex align-items-center">
+              <span class="d-inline-block me-2 mb-1">Rating: </span>
+              <img src="images/star.svg" alt="star" width="20">
+              <img src="images/star.svg" alt="star" width="20">
+              <img src="images/star.svg" alt="star" width="20">
+              <img src="images/star.svg" alt="star" width="20">
+              <img src="images/star.svg" alt="star" width="20">
+            </div>
+          </div>
+        </div>
+        <h5 class="titleMd  mt-4 mb-2">Route Detail</h5>
+        <div class="routeDiv">
+          <span><img src="images/address02.svg"> 7037 Dunnar Rd Dundlk, MD 21222 </span>
+          <p></p>
+          <span><img src="images/address01.svg"> 1508 Windemere Ave Baltimore MD 21215</span>
+        </div>
       </div>
-      <div class="formGroup">
-        <label class="form-label">New Password</label>
-        <input type="password" class="form-control" placeholder="Enter New Password">
+      <div class="col-md-6 mt-4 mt-md-0">
+        <h5 class="titleMd mb-2">Order Detail</h5>
+        <hr>
+        <div class="userDetail">
+          <p class="textMd"><b>Pickup:</b> 7037 7037 Dunnar Rd MD 21222 </p>
+          <p class="textMd"><b>Dropoff:</b> 7037 7037 Dunnar Rd MD 21222 </p>
+          <p class="textMd"><b>Pickup Date:</b> 19 Dec 2024</p>
+          <p class="textMd"><b>Pickup Time:</b> 02:00PM</p>
+          <p class="textMd"><b>Airline:</b> -</p>
+          <p class="textMd"><b>Flight Number:</b> -</p>
+          <p class="textMd"><b>Large Luggage:</b> 2</p>
+          <p class="textMd"><b>Small Luggage:</b> 2</p>
+          <p class="textMd"><b>Adults:</b> 2</p>
+          <p class="textMd"><b>Kids:</b> 2</p>
+          <hr>
+          <p class="textMd"><b>Total Distance:</b> 30 Km</p>
+          <p class="textMd"><b>Fare Charges:</b> $16.80</p>
+          <p class="textMd"><b>Total:</b> $16.80</p>
+          <hr>
+          <p class="textMd"><b>Status:</b> <span class="primaryColor">Pending</span></p>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btnBlack">Accept</button>
+          <button type="submit" class="btn btnRed">Cancel</button>
+        </div>
       </div>
-      <div class="formGroup">
-        <label class="form-label">Confirm Password</label>
-        <input type="password" class="form-control" placeholder="Enter Confirm Password">
-      </div>
-      <div class="formGroup">
-        <button type="submit" class="btn btnBlack w-100">Submit</button>
-      </div>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -146,7 +182,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-5 text-center copyright py-3">
+    <div class="mt-4 mt-lg-5 text-center copyright py-3">
       <p>© 2024 RydeLane. All rights reserved.</p>
     </div>
   </div>

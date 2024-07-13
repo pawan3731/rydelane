@@ -1,0 +1,114 @@
+@media (max-width: 1439.98px) {
+    .driverName {
+        font-size: 16px;
+    }
+    .driverNb, .driverNb, .ratingWrap {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .whiteCard {
+        padding: 24px;
+    }
+    .form-control, .addNumber p span {
+        height: 42px;
+        font-size: 14px;
+    }
+    .sectionPadding {
+        padding-block: 50px;
+    }
+    .pageTitle {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .pageSubTitle, .form-label, .formLink, p, .accordion-body, .contentPage p {
+        font-size: 15px;
+    }
+    .appLink_outer {
+        margin-top: 20px;
+    }
+    .appLink_btn {
+        gap: 10px;
+        padding: 7px 10px;
+        width: 160px;
+    }
+    .appLink_btn span {
+        font-size: 12px;
+    }
+    .titleMd, .contentPage h4 {
+        font-size: 18px;
+    }
+    .textMd, .checkList li {
+        font-size: 15px;
+    }
+    .accordion-button {
+        font-size: 16px;
+    }
+    .banner {
+        padding-block: 90px;
+    }
+    .banner h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .siteHeader .navbar-toggler svg {
+        width: 30px;
+        height: 30px;
+    }
+    .container {
+        padding-inline: 20px;
+    }
+    .siteHeader .navbar-toggler {
+        padding: 0;
+    }
+    .siteHeader .navbar-collapse {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        top: 100%;
+        left: 0px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        border-top: 1px solid rgb(221, 221, 221);
+    }
+    .siteHeader .nav-item .nav-link {
+        color: var(--secondaryColor);
+    }
+    .siteHeader .notification a {
+        padding: 2px 18px 0 10px;
+    }
+    .siteHeader .notification .notiDot {
+        right: 19px;
+    }
+    .siteHeader {
+        padding-block: 5px;
+    }
+    .pageTitle {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .pageSubTitle, .form-label, .formLink, p, .accordion-body, .contentPage p {
+        font-size: 14px;
+    }
+    .headerBtn .btn {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+    .footerContent h4 {
+        font-size: 18px;
+        margin: 16px 0 12px;
+    }
+    .banner h1 {
+        font-size: 32px;
+    }
+    .banner {
+        padding-block: 50px;
+    }
+}

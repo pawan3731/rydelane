@@ -17,8 +17,9 @@
 <nav class="navbar navbar-expand-md siteHeader sticky-top">
   <div class="container">
     <a class="navbar-brand me-auto" href="index.html"><img src="images/logo_2.webp" alt="site-logo" width="70"></a>
-    <button class="navbar-toggler order-3 ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler order-3 ms-3" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <svg fill="#fff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <title></title>
         <g data-name="menu " id="menu_">
@@ -41,9 +42,13 @@
         </li>
       </ul>
     </div>
-    <div class="ms-3 headerBtn d-none">
-      <a href="sign_up.html" class="btn btnPrimary" type="button">Sign Up</a>
-      <a href="login.html" class="btn btnPrimary ms-1 ms-md-3" type="button">Login</a>
+    <div class="notification">
+      <a href="notification.html"><i class="bi bi-bell"></i>
+        <span class="notiDot"></span> </a>
+    </div>
+    <div class="headerBtn d-none">
+      <a href="sign_up.html" class="btn btnWhite" type="button">Sign Up</a>
+      <a href="login.html" class="btn btnWhite ms-1 ms-md-3" type="button">Login</a>
     </div>
     <div class="dropdown">
       <div class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,7 +87,7 @@
 
           <div class="hideDiv mt-3">
             <div class="inputRow">
-              <input type="email" class="form-control" placeholder="Enter Password">
+              <input type="email" class="form-control" placeholder="Enter Stop">
               <button id="DeleteRow" type="button"><img src="images/delete.svg" alt="delete-icon" width="16"></button>
             </div>
             <div id="inputNewRow"></div>
@@ -105,7 +110,11 @@
               <input type="number" class="form-control" placeholder="MM">
             </div>
             <div class="col-4">
-              <input type="text" class="form-control" placeholder="AM/PM">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>AM/PM</option>
+                <option value="am">AM</option>
+                <option value="pm">PM</option>
+              </select>
             </div>
           </div>
         </div>
@@ -202,10 +211,7 @@
             </span>
           </p>
         </div>
-        <div class="formGroup col-lg-6">
-          <label class="form-label">Upfront Amount</label>
-          <input type="number" class="form-control" placeholder="Enter Amount">
-        </div>
+        
         <div class="formGroup col-lg-3">
           <label class="form-label">Advanced Options</label><br>
           <div class="checkWrap">
@@ -220,6 +226,23 @@
           </div>
         </div>
         <div class="formGroup col-lg-3">
+          <div class="checkWrap mb-1">
+            <input type="checkbox" class="form-check-input carseatShow" id="carseat">
+            <label class="form-check-label" for="carseat">Carseat <span data-bs-toggle="tooltip" data-bs-placement="top"
+                title="If you want to share a car, please select this option. We will try to match you with a driver who has a carseat. There is a $10 fee for each seat."><img src="images/info.svg" alt="info-icon" width="20"> </span></label>
+          </div>
+          <div class="carseatHide">
+            <div class="checkWrap">
+              <input type="checkbox" class="form-check-input" id="check1">
+              <label class="form-check-label" for="check1">Toddler </label>
+            </div>
+            <div class="checkWrap">
+              <input type="checkbox" class="form-check-input" id="check1">
+              <label class="form-check-label" for="check1">Infant </label>
+            </div>
+          </div>
+        </div>
+        <div class="formGroup col-lg-3">
           <div class="checkWrap">
             <input type="checkbox" class="form-check-input" id="check1">
             <label class="form-check-label" for="check1">Animal <span data-bs-toggle="tooltip" data-bs-placement="top"
@@ -229,112 +252,14 @@
       </div>
       <div class="w-50 mx-auto mt-3">
         <div class="formGroup">
-          <button type="submit" class="btn btnPrimary w-100">Book Driver</button>
+          <label class="form-label">Upfront Amount</label>
+          <input type="number" class="form-control" placeholder="Enter Amount">
+        </div>
+        <div class="formGroup">
+          <button type="submit" class="btn btnBlack w-100">Book Driver</button>
         </div>
       </div>
     </form>
-  </div>
-</section>
-
-<section class="sectionPadding pt-0">
-  <div class="container">
-    <div class="mb-4 mb-lg-5 text-center">
-      <h1 class="pageTitle mb-2">Drivers</h1>
-    </div>
-    <div class="row g-4">
-      <div class="col-xl-4 col-md-6">
-        <div class="driverCard">
-          <div class="cardTop">
-            <div class="driverImg">
-              <img src="images/img01.png" alt="driver-img">
-            </div>
-            <div class="driverDetail">
-              <div class="driverName">Qasim <span class="awayTime"><span class="awaydot"></span> 2 miles away</span>
-              </div>
-              <div class="driverNb">GMC Yokun XL</div>
-              <div class="driverNb">24254T3</div>
-            </div>
-            <div class="driverPrice">$190.05</div>
-          </div>
-          <div class="driverDes">I have been working 3 years with uber. I am reliable driver and always come on time.
-          </div>
-          <div class="ratingWrap d-flex align-items-center justify-content-between flex-wrap gap-2">
-            <div class="rating d-flex align-items-center">
-              <span class="d-inline-block me-2 mb-1">Rating: </span>
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-            </div>
-            <div class="passangerLimit">Max passanger <span>5</span></div>
-          </div>
-          <button type="submit" class="btn btnBlack w-100 mt-3">Request</button>
-        </div>
-      </div>
-
-      <div class="col-xl-4 col-md-6">
-        <div class="driverCard">
-          <div class="cardTop">
-            <div class="driverImg">
-              <img src="images/img01.png" alt="driver-img">
-            </div>
-            <div class="driverDetail">
-              <div class="driverName">Qasim <span class="awayTime"><span class="awaydot"></span> 2 miles away</span>
-              </div>
-              <div class="driverNb">GMC Yokun XL</div>
-              <div class="driverNb">24254T3</div>
-            </div>
-            <div class="driverPrice">$280.05</div>
-          </div>
-          <div class="driverDes">I have been working 3 years with uber. I am reliable driver and always come on time.
-          </div>
-          <div class="ratingWrap d-flex align-items-center justify-content-between flex-wrap gap-2">
-            <div class="rating d-flex align-items-center">
-              <span class="d-inline-block me-2 mb-1">Rating: </span>
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-            </div>
-            <div class="passangerLimit">Max passanger <span>5</span></div>
-          </div>
-          <button type="submit" class="btn btnPrimary w-100 mt-3">Request Premium</button>
-        </div>
-      </div>
-
-      <div class="col-xl-4 col-md-6">
-        <div class="driverCard">
-          <div class="cardTop">
-            <div class="driverImg">
-              <img src="images/img01.png" alt="driver-img">
-            </div>
-            <div class="driverDetail">
-              <div class="driverName">Qasim <span class="awayTime"><span class="awaydot"></span> 2 miles away</span>
-              </div>
-              <div class="driverNb">GMC Yokun XL</div>
-              <div class="driverNb">24254T3</div>
-            </div>
-            <div class="driverPrice">$190.05</div>
-          </div>
-          <div class="driverDes">I have been working 3 years with uber. I am reliable driver and always come on time.
-          </div>
-          <div class="ratingWrap d-flex align-items-center justify-content-between flex-wrap gap-2">
-            <div class="rating d-flex align-items-center">
-              <span class="d-inline-block me-2 mb-1">Rating: </span>
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-            </div>
-            <div class="passangerLimit">Max passanger <span>5</span></div>
-          </div>
-          <button type="submit" class="btn btnBlack w-100 mt-3">Request</button>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -421,6 +346,14 @@
       });
     });
 
+    $('.carseatShow').change(function () {
+      if ($(this).is(":checked")) {
+        $('.carseatHide').addClass("open");
+      } else {
+        $('.carseatHide').removeClass("open");
+      }
+    });
+
     $('.checkShow').change(function () {
       if ($(this).is(":checked")) {
         $('.hideDiv').addClass("open");
@@ -432,7 +365,7 @@
     $("#newRowAdder").click(function () {
       newRowAdd =
         '<div class="inputRow mt-2">' +
-        '<input type="email" class="form-control" placeholder="Enter Password"> ' +
+        '<input type="email" class="form-control" placeholder="Enter Stop"> ' +
         '<button id="DeleteRow" type="button"><img src="images/delete.svg" alt="delete-icon" width="16"></button> ' +
         '</div>';
 
