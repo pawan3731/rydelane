@@ -119,6 +119,9 @@ img {
 .fontWeight_600 {
     font-weight: 600;;
 }
+.wHalf {
+    width: 50%;
+}
 
 /* Header */
 .siteHeader {
@@ -454,7 +457,9 @@ table tbody tr:hover {
 .orderDetail .container {
     max-width: 1100px;
 }
-
+.orderDetail .driverDetail {
+    flex-basis: calc(100% - 100px);
+}
 .orderDetail .userDetail p {
     border-bottom: none;
     padding: 4px 0;

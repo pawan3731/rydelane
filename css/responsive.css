@@ -111,6 +111,24 @@
     .banner {
         padding-block: 50px;
     }
+    .contentPage h4 {
+        font-size: 16px;
+    }
+    .wHalf {
+        width: 100%;
+    }
+    .userDetail p b {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .headerBtn .btn {
+        font-size: 12px;
+    }
+    .banner h1 {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 380px) {
