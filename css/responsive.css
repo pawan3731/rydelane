@@ -112,3 +112,9 @@
         padding-block: 50px;
     }
 }
+
+@media (max-width: 380px) {
+    .siteHeader .navbar-brand img {
+        width: 60px;
+    }
+}
