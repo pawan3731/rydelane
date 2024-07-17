@@ -9,6 +9,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
@@ -69,23 +70,9 @@
     <div class="mb-4 mb-lg-5 text-center">
       <h1 class="pageTitle">My Orders</h1>
     </div>
-    <div class="orderfield mb-3">
-      <div class="orderSearch">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <div class="orderFilter d-flex gap-3 align-items-center">
-        <label class="form-label">Filter</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>All</option>
-          <option value="1">Completed</option>
-          <option value="2">Ongoing</option>
-          <option value="3">Upcoming</option>
-        </select>
-      </div>
-    </div>
     <div class="rydelaneTable table-responsive">
-      <table class="table">
-        <head>
+      <table id="rydalaneDataTable" class="table">
+        <thead>
           <tr>
             <th>ID</th>
             <th>Image</th>
@@ -97,7 +84,7 @@
             <th>Distance</th>
             <th class="text-center">Action</th>
           </tr>
-        </head>
+        </thead>
         <tbody>
           <tr>
             <td>#2312</td>
@@ -157,7 +144,7 @@
             </td>
           </tr>
         </tbody>
-      </table>
+    </table>
     </div>
   </div>
   </div>
@@ -230,6 +217,11 @@
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+  <script>
+      new DataTable('#rydalaneDataTable');
+  </script>
 </body>
 
 </html>

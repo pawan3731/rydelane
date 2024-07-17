@@ -120,6 +120,9 @@
     .userDetail p b {
         flex-basis: 100%;
     }
+    div.dt-container div.dt-length, div.dt-container div.dt-search {
+        text-align: left;
+    }
 }
 
 @media (max-width: 575.98px) {

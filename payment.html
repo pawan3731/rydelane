@@ -64,67 +64,72 @@
   </div>
 </nav>
 
-<section class="sectionPadding orderDetail">
-  <div class="container">
+<section class="sectionPadding">
+  <div class="formContainer">
     <div class="mb-4 mb-lg-5 text-center">
-      <h1 class="pageTitle">Order Detail</h1>
+      <h1 class="pageTitle">Payment</h1>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="cardTop">
-          <div class="driverImg">
-            <img src="images/img01.png" alt="driver-img">
+    <form class="whiteCard">
+      <h4 class="titleMd mb-4"><i class="bi bi-credit-card-2-back me-2"></i> Credit / Debit Card</h4>
+      <div class="row">
+      <div class="formGroup col-md-12">
+        <label class="form-label">Card Number</label>
+        <input type="number" class="form-control" placeholder="xxxx xxxx xxxx xxxx">
+      </div>
+      <div class="formGroup col-6">
+        <label class="form-label">Vaild Date</label>
+        <input type="number" class="form-control" placeholder="MM/YY">
+      </div>
+      <div class="formGroup col-6">
+        <label class="form-label">CVV</label>
+        <input type="number" class="form-control" placeholder="CVV">
+      </div>
+      <div class="formGroup col-lg-12">
+        <button type="submit" class="btn btnBlack w-100">Pay $16.80</button>
+      </div>
+    </div>
+      <div class="savedCard">
+        <h4 class="titleMd my-4"><i class="bi bi-clock me-2"></i> Saved Card</h4>
+        <div class="savedCardWrap">
+          <div class="savedCardList">
+            <div class="form-check">
+              <input class="form-check-input cardShow" type="radio" name="savedCard" id="card02">
+              <label class="form-check-label" for="card02">
+                Flipkart Axis Back Credit Card - xxxx 7854
+              </label>
+            </div>
+            <div class="activeCard mt-3 open" style="display: none;">
+              <div class="row">
+                <div class="col-6">
+                  <input type="number" class="form-control" placeholder="CVV">
+                </div>
+                <div class="col-6">
+                  <button type="submit" class="btn btnBlack w-100">Pay $16.80</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="driverDetail">
-            <div class="driverName">Qasim <span class="awayTime"></div>
-            <div class="driverNb">7037 Dunnar Rd Dundlk, MD 21222</div>
-            <div class="rating d-flex align-items-center">
-              <span class="d-inline-block me-2 mb-1">Rating: </span>
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
-              <img src="images/star.svg" alt="star" width="20">
+          <div class="savedCardList">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="savedCard" id="card01">
+              <label class="form-check-label" for="card01">
+                HDFC Bank Debit Card - xxxx 5762
+              </label>
+            </div>
+            <div class="activeCard mt-3" style="display: none;">
+              <div class="row">
+                <div class="col-6">
+                  <input type="number" class="form-control" placeholder="CVV">
+                </div>
+                <div class="col-6">
+                  <button type="submit" class="btn btnBlack w-100">Pay $16.80</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <h5 class="titleMd  mt-4 mb-2">Route Detail</h5>
-        <div class="routeDiv position-relative">
-          <span><img src="images/address02.svg"> 7037 Dunnar Rd Dundlk, MD 21222 </span>
-            <div class="stopsDiv">
-              <span>1508 Windemere Ave Baltimore MD 21215 (Stop 1)</span>
-              <span>1508 Windemere Ave Baltimore MD 21215 (Stop 2)</span>
-            </div>
-          <span><img src="images/address01.svg"> 1508 Windemere Ave Baltimore MD 21215</span>
-        </div>
       </div>
-      <div class="col-md-6 mt-4 mt-md-0">
-        <h5 class="titleMd mb-2">Order Detail</h5>
-        <hr>
-        <div class="userDetail">
-          <p class="textMd"><b>Pickup:</b> 7037 7037 Dunnar Rd MD 21222 </p>
-          <p class="textMd"><b>Dropoff:</b> 7037 7037 Dunnar Rd MD 21222 </p>
-          <p class="textMd"><b>Pickup Date:</b> 19 Dec 2024</p>
-          <p class="textMd"><b>Pickup Time:</b> 02:00PM</p>
-          <p class="textMd"><b>Airline:</b> -</p>
-          <p class="textMd"><b>Flight Number:</b> -</p>
-          <p class="textMd"><b>Large Luggage:</b> 2</p>
-          <p class="textMd"><b>Small Luggage:</b> 2</p>
-          <p class="textMd"><b>Adults:</b> 2</p>
-          <p class="textMd"><b>Kids:</b> 2</p>
-          <hr>
-          <p class="textMd"><b>Total Distance:</b> 30 Km</p>
-          <p class="textMd"><b>Fare Charges:</b> $16.80</p>
-          <p class="textMd"><b>Total:</b> $16.80</p>
-          <hr>
-          <p class="textMd"><b>Status:</b> <span class="primaryColor">Pending</span></p>
-        </div>
-        <div class="mt-4">
-          <a href="payment.html" class="btn btnBlack">Pay Now</a>
-          <button type="submit" class="btn btnRed">Cancel</button>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -185,7 +190,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-4 mt-lg-5 text-center copyright py-3">
+    <div class="mt-5 text-center copyright py-3">
       <p>© 2024 RydeLane. All rights reserved.</p>
     </div>
   </div>
@@ -195,6 +200,15 @@
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('.cardShow').change(function () {
+      if ($(this).is(":checked")) {
+        $('.activeCard').slideDown();
+      } else {
+        $('.activeCard').slideUp();
+      }
+    });
+  </script>
 </body>
 
 </html>
