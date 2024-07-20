@@ -9,7 +9,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
-    <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" rel="stylesheet" />
+  <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
@@ -70,81 +70,181 @@
     <div class="mb-4 mb-lg-5 text-center">
       <h1 class="pageTitle">My Orders</h1>
     </div>
-    <div class="rydelaneTable table-responsive">
-      <table id="rydalaneDataTable" class="table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Image</th>
-            <th style="min-width: 120px;">Name</th>
-            <th style="min-width: 200px;">Route</th>
-            <th style="min-width: 200px;">Date & Time</th>
-            <th>Status</th>
-            <th>Price</th>
-            <th>Distance</th>
-            <th class="text-center">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>#2312</td>
-            <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
-            <td>Jackson</td>
-            <td>
-              <div class="routeDiv">
-                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
-                <p></p>
-                <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
-              </div>
-            </td>
-            <td>Thu, May 26 at 10:00 AM</td>
-            <td><span class="status upcomingStatus">Upcoming</span></td>
-            <td>$21.50</td>
-            <td>8.5 miles</td>
-            <td align="center">
-              <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
-            </td>
-          </tr>
-          <tr>
-            <td>#2312</td>
-            <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
-            <td>Jackson</td>
-            <td>
-              <div class="routeDiv">
-                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
-                <p></p>
-                <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
-              </div>
-            </td>
-            <td>Thu, May 26 at 10:00 AM</td>
-            <td><span class="status ongoingStatus">Ongoing</span></td>
-            <td>$21.50</td>
-            <td>8.5 miles</td>
-            <td align="center">
-              <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
-            </td>
-          </tr>
-          <tr>
-            <td>#2312</td>
-            <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
-            <td>Jackson</td>
-            <td>
-              <div class="routeDiv">
-                <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
-                <p></p>
-                <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
-              </div>
-            </td>
-            <td>Thu, May 26 at 10:00 AM</td>
-            <td><span class="status completedStatus">Completed</span></td>
-            <td>$21.50</td>
-            <td>8.5 miles</td>
-            <td align="center">
-              <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
-            </td>
-          </tr>
-        </tbody>
-    </table>
+    <ul class="nav nav-tabs rydelane_tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" data-bs-toggle="tab" href="#upcomingOrder" aria-selected="true"
+          role="tab">Upcoming</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" data-bs-toggle="tab" href="#ongningOrder" aria-selected="false" tabindex="-1"
+          role="tab">Ongning</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" data-bs-toggle="tab" href="#completedOrder" aria-selected="false" tabindex="-1"
+          role="tab">Completed</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="upcomingOrder" class="container tab-pane active" role="tabpanel">
+        <div class="rydelaneTable table-responsive">
+          <table class="table rydalaneDataTable w-100">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th style="min-width: 120px;">Name</th>
+                <th style="min-width: 200px;">Route</th>
+                <th style="min-width: 200px;">Date & Time</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Distance</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#2312</td>
+                <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
+                <td>Jackson</td>
+                <td>
+                  <div class="routeDiv">
+                    <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
+                    <p></p>
+                    <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
+                  </div>
+                </td>
+                <td>Thu, May 26 at 10:00 AM</td>
+                <td><span class="status upcomingStatus">Upcoming</span></td>
+                <td>$21.50</td>
+                <td>8.5 miles</td>
+                <td align="center">
+                  <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>#2312</td>
+                <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
+                <td>Jackson</td>
+                <td>
+                  <div class="routeDiv">
+                    <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
+                    <p></p>
+                    <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
+                  </div>
+                </td>
+                <td>Thu, May 26 at 10:00 AM</td>
+                <td><span class="status upcomingStatus">Upcoming</span></td>
+                <td>$21.50</td>
+                <td>8.5 miles</td>
+                <td align="center">
+                  <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>#2312</td>
+                <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
+                <td>Jackson</td>
+                <td>
+                  <div class="routeDiv">
+                    <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
+                    <p></p>
+                    <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
+                  </div>
+                </td>
+                <td>Thu, May 26 at 10:00 AM</td>
+                <td><span class="status upcomingStatus">Upcoming</span></td>
+                <td>$21.50</td>
+                <td>8.5 miles</td>
+                <td align="center">
+                  <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="ongningOrder" class="container tab-pane" role="tabpanel">
+        <div class="rydelaneTable table-responsive">
+          <table class="table rydalaneDataTable w-100">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th style="min-width: 120px;">Name</th>
+                <th style="min-width: 200px;">Route</th>
+                <th style="min-width: 200px;">Date & Time</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Distance</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#2312</td>
+                <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
+                <td>Jackson</td>
+                <td>
+                  <div class="routeDiv">
+                    <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
+                    <p></p>
+                    <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
+                  </div>
+                </td>
+                <td>Thu, May 26 at 10:00 AM</td>
+                <td><span class="status ongoingStatus">Ongoing</span></td>
+                <td>$21.50</td>
+                <td>8.5 miles</td>
+                <td align="center">
+                  <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="completedOrder" class="container tab-pane" role="tabpanel">
+        <div class="rydelaneTable table-responsive">
+          <table class="table rydalaneDataTable w-100">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th style="min-width: 120px;">Name</th>
+                <th style="min-width: 200px;">Route</th>
+                <th style="min-width: 200px;">Date & Time</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Distance</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#2312</td>
+                <td><img src="images/img01.png" alt="driver-img" class="rounded-2 tableImg" width="50" height="50"></td>
+                <td>Jackson</td>
+                <td>
+                  <div class="routeDiv">
+                    <span><img src="images/address02.svg"> 7037 Dunnar Rd</span>
+                    <p></p>
+                    <span><img src="images/address01.svg"> 1508 Windemere Ave</span>
+                  </div>
+                </td>
+                <td>Thu, May 26 at 10:00 AM</td>
+                <td><span class="status completedStatus">Completed</span></td>
+                <td>$21.50</td>
+                <td>8.5 miles</td>
+                <td align="center">
+                  <a class="viewBtn" href="order_detail.html"><img src="images/view.svg" alt="view-icon" width="20"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
   </div>
@@ -220,7 +320,7 @@
   <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
   <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
   <script>
-      new DataTable('#rydalaneDataTable');
+    new DataTable('.rydalaneDataTable');
   </script>
 </body>
 

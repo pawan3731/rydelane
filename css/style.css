@@ -197,7 +197,7 @@ img {
 
 /* Banner */
 .banner {
-    background: url(/images/bannerImg.jpg);
+    background: url(../../website/images/bannerImg.jpg);
     padding-block:160px;
     position: relative;
     display: flex;
@@ -244,6 +244,7 @@ img {
 }
 .formGroup {
     margin-bottom:20px;
+    position: relative;
 }
 .form-label {
     font-size:16px;
@@ -257,6 +258,20 @@ img {
 }
 textarea.form-control {
     height: 120px;
+}
+.formGroup .toggle-password {
+    position: absolute;
+    top: 41px;
+    right: 22px;
+    cursor: pointer;
+}
+.formGroup .invalid-feedback {
+    color:var(--redColor);
+    font-size: 12px;
+    font-weight: 600;
+}
+.formGroup .has-error input {
+    border-color: var(--redColor);
 }
 .formLink {
     color:var(--secondaryColor);
@@ -309,6 +324,12 @@ textarea.form-control {
     flex-basis: 80px;
     border-radius: 6px;
     overflow: hidden;
+    height: 80px;
+}
+.driverImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .driverDetail {
     flex-basis: calc(100% - 170px);
@@ -355,7 +376,6 @@ span.awaydot {
 }
 .driverDes {
     font-size: 15px;
-    margin: 10px 0;
     line-height: 1.4;
     color: var(--textLightColor);
 }
@@ -371,6 +391,9 @@ span.awaydot {
     color: var(--whiteColor);
     border-radius: 4px;
     font-weight: bold;
+}
+.ratingWrap i {
+    color: #cb6e2f;
 }
 
 
@@ -841,4 +864,37 @@ table tbody tr:hover {
     to {
         transform: rotate(.5turn)
     }
+}
+
+
+/* Tab Css */
+.nav-tabs.rydelane_tab {
+    border: none;
+    margin: 20px 0;
+    border-bottom: 1px solid var(--borderColor);
+    padding-bottom: 1px;
+}
+
+.nav-tabs.rydelane_tab .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 18px;
+    color: var(--textColor);
+    font-weight: 500;
+    padding: 10px 32px;
+}
+
+.nav-tabs.rydelane_tab .nav-link.active {
+    border-color: var(--secondaryColor);
+    color: var(--secondaryColor);
+}
+
+/* Rating List */
+.ratingListPage .driverDetail {
+    flex-basis: calc(100% - 100px);
+}
+
+#writeReview .ratingWrap i {
+    color: #cb6e2f;
+    font-size: 24px;
 }
